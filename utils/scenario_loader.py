@@ -45,4 +45,4 @@ def load_scenarios_from_file(path: str) -> List[Scenario]:
     return scenarios
 
 
-SCENARIOS = load_scenarios_from_file(config.CONFIG_FILE)
+SCENARIOS = load_scenarios_from_file("./utils/config.json")
