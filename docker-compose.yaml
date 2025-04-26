@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  app:
+    image: v4dikos/shelter:latest
+    container_name: bunker-app
+    ports:
+      - "8723:8723"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+    restart: unless-stopped
+
   redis:
     image: redis:7.2
     container_name: bunker-redis
