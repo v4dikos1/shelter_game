@@ -1,5 +1,7 @@
 import json
 from typing import List
+
+import config
 from models.scenario import Scenario, WinCondition, Item, Action, BunkerFeature, SpecialCard, SpecialCardAction, \
     BaseAction
 
