@@ -188,7 +188,7 @@ async def get_bunker_info(user_id: int, bot: Bot) -> str | BadResponse:
     return (
         f"🏰 {bold('Бункер')}\n\n"
         f"{bold('Сценарий')}: {escape_md(bunker.scenario_name)}\n\n"
-        f"{escape_md(bunker.scenario_description)}"
+        f"{bunker.scenario_description}"
         f"{features_text}"
     )
 
