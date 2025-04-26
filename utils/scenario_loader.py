@@ -43,4 +43,4 @@ def load_scenarios_from_file(path: str) -> List[Scenario]:
     return scenarios
 
 
-SCENARIOS = load_scenarios_from_file("D:\\Bunker\\utils\\config.json")
+SCENARIOS = load_scenarios_from_file(config.CONFIG_FILE)
