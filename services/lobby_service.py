@@ -181,8 +181,9 @@ async def get_bunker_info(user_id: int, bot: Bot) -> str | BadResponse:
 
     features_text = ""
     if bunker.features:
+        feature = random.choice(bunker.features)
         features_text = "\n\n" + bold("Особенности бункера") + ":\n" + "\n".join(
-            [f"• {escape_md(feature.name)}: {escape_md(feature.description)}" for feature in bunker.features]
+            [f"• {escape_md(feature.name)}: {escape_md(feature.description)}"]
         )
 
     return (
