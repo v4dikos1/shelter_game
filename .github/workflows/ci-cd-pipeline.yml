@@ -41,6 +41,7 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         script: |
           cd /
+          export API_TOKEN=${{ secrets.API_TOKEN }}
           docker-compose down
           docker-compose pull
           docker-compose up -d
