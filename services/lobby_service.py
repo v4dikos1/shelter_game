@@ -167,10 +167,10 @@ def generate_characteristics(characteristics: Dict[str, List[str]]) -> Dict[str,
     return generated_characteristics
 
 def generate_items(items: List[Item]) -> List[Item]:
-    return items
+    return [random.choice(items)]
 
 def generate_special_cards(special_cards: List[SpecialCard]) -> List[SpecialCard]:
-    return special_cards
+    return [random.choice(special_cards)]
 
 async def get_bunker_info(user_id: int, bot: Bot) -> str | BadResponse:
     response = await get_lobby_by_user(user_id)
