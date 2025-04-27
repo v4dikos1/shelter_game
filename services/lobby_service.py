@@ -213,14 +213,14 @@ async def get_player_info(user_id: int) -> str:
 
             if card.items:
                 items = "\n".join([
-                    f"• {escape_md(item.name)}"
+                    f"• {escape_md(item.name)} - {escape_md(item.description)}"
                     for item in card.items
                 ])
                 card_parts.append(f"{bold('Предметы')}:\n{items}")
 
             if card.special_cards:
                 specials = "\n".join([
-                    f"• {escape_md(s.name)}"
+                    f"• {escape_md(s.name)} - {escape_md(s.description)}"
                     for s in card.special_cards
                 ])
                 card_parts.append(f"{bold('Спец. карты')}:\n{specials}")
